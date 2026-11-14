@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #63e6c5, #4779e8);
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    padding: 30px;
+    border-radius: 7px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    font-size: 32px;
+    color: #111;
+    margin-bottom: 28px;
+}
+
+.input-box {
+    display: flex;
+    gap: 7px;
+    margin-bottom: 22px;
+}
+
+.input-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 15px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.input-box input:focus {
+    border-color: #8e44e9;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: #9146e8;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+#addBtn {
+    width: 55px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+#todoList {
+    list-style: none;
+}
+
+#todoList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f1f1f1;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    overflow: hidden;
+    font-size: 17px;
+}
+
+.todo-text {
+    flex: 1;
+    padding: 14px 15px;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+}
+
+.todo-text.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.deleteBtn {
+    background: #e74c3c;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    display: none;
+}
+
+#todoList li:hover .deleteBtn {
+    display: block;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.footer p {
+    font-size: 16px;
+    color: #333;
+}
+
+#clearBtn {
+    padding: 11px 14px;
+    font-size: 16px;
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 20px;
+    }
+
+    .footer p {
+        font-size: 13px;
+    }
+}
